@@ -17,7 +17,11 @@ if (!mongoUri) {
   console.error("Missing MONGO_URI in .env");
   process.exit(1);
 }
+require("dotenv").config(); // optional locally
 
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("DB Connected"))
+  .catch(err => console.log(err));
 mongoose.connect(mongoUri)
   .then(() => console.log("DB Connected"))
   .catch(err => {
