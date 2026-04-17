@@ -4,7 +4,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
-const leadRoutes = require("../routes/leadRoutes");
+const leadRoutes = require("./backend/routes/leadRoutes");
 
 const app = express();
 app.use(cors());
