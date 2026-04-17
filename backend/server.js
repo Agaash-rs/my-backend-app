@@ -4,7 +4,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
-const leadRoutes = require("./routes/leadroutes");
+const leadRoutes = require("./routes/leadRoutes");
 
 const app = express();
 app.use(cors());
@@ -14,14 +14,10 @@ const mongoUri = process.env.MONGO_URI;
 const port = process.env.PORT || 5000;
 
 if (!mongoUri) {
-  console.error("Missing MONGO_URI in .env");
+  console.error("Missing MONGO_URI in environment variables");
   process.exit(1);
 }
-require("dotenv").config(); // optional locally
 
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("DB Connected"))
-  .catch(err => console.log(err));
 mongoose.connect(mongoUri)
   .then(() => console.log("DB Connected"))
   .catch(err => {
