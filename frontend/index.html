@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller Rocket</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h2>Seller Rocket</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#formSection">Contact</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Grow Your Online Business 🚀</h1>
+  <p>We help you scale on Amazon, Shopify & WordPress</p>
+  <button onclick="scrollToForm()">Get Started</button>
+</section>
+
+<section id="services" class="services">
+  <h2>Our Services</h2>
+
+  <div class="service-box">
+    <div class="card">Amazon Management</div>
+    <div class="card">Shopify Store Setup</div>
+    <div class="card">WordPress Development</div>
+  </div>
+</section>
+
+<section id="formSection" class="form-section">
+  <h2>Contact Us</h2>
+
+  <form id="leadForm">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="text" id="phone" placeholder="Phone" required>
+    <input type="email" id="email" placeholder="Email" required>
+
+    <select id="platform">
+      <option>Amazon</option>
+      <option>Flipkart</option>
+      <option>Shopify</option>
+      <option>WordPress</option>
+    </select>
+
+    <textarea id="message" placeholder="Message"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="msg"></p>
+</section>
+
+<footer>
+  <p>Seller Rocket | contact@sellerrocket.com | +91 9876543210</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
